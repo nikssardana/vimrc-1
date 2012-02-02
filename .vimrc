@@ -3,6 +3,10 @@
 " Tommy MacWilliam
 " tmacwilliam@cs.harvard.edu
 "
+" Improvements ;)
+" David J. Malan
+" malan@harvard.edu
+"
 " Shortcuts:
 " 	; maps to :
 " 	,c<space>: Toggle comments
@@ -116,3 +120,6 @@ nnoremap <leader>w :tabclose<CR>
 nnoremap ; :
 " also autosave when going to insert mode
 inoremap kj <Esc>:w<CR>
+
+" ensure line numbers are viewable in translucent terminal windows
+highlight LineNr ctermfg=gray ctermbg=black
