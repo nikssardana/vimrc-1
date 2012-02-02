@@ -35,9 +35,6 @@ set tabstop=4
 set smarttab
 set expandtab
 
-" highlight characters longer than 120 lines
-match ErrorMsg '\%>120v.\+'
-
 " faster tab navigation
 nnoremap <S-tab> :tabprevious<CR>
 nnoremap <tab> :tabnext<CR>
