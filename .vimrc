@@ -8,16 +8,17 @@
 " malan@harvard.edu
 "
 " Shortcuts:
-" 	; maps to :
-" 	,c<space>: Toggle comments
-" 	,a: ack
-" 	,e: edit in new tab
-" 	,l: Toggle NERDTree
-" 	,o: command-t open
-" 	,s: split window
-" 	,t: new tab
-" 	,w: close tab
+"   ; maps to :
+"   ,c<space>: Toggle comments
+"   ,a: ack
+"   ,e: edit in new tab
+"   ,l: Toggle NERDTree
+"   ,o: command-t open
+"   ,s: split window
+"   ,t: new tab
+"   ,w: close tab
 "   kj: enter normal mode
+"   gt: toggle tabs opened with ,t
 """""""""""""""""""""""""""""""""
 
 " long live vim
@@ -60,66 +61,66 @@ set noswapfile
 " disable annoying beep on errors
 set noerrorbells
 if has('autocmd')
-  autocmd GUIEnter * set vb t_vb=
-endif
+      autocmd GUIEnter * set vb t_vb=
+      endif
 
-" font options
-set background=dark
-colorscheme jellybeans
-set gfn=Inconsolata:h14
+      " font options
+      set background=dark
+      colorscheme pablo " matches my terminal's colorscheme
+      set gfn=Inconsolata:h14
 
-" keep at least 5 lines below the cursor
-set scrolloff=5
+      " keep at least 5 lines below the cursor
+      set scrolloff=5
 
-" window options
-set showmode
-set showcmd
-set ruler
-set ttyfast
-set backspace=indent,eol,start
-set laststatus=2
+      " window options
+      set showmode
+      set showcmd
+      set ruler
+      set ttyfast
+      set backspace=indent,eol,start
+      set laststatus=2
 
-" always show tab line to avoid annoying resize
-set showtabline=2
+      " always show tab line to avoid annoying resize
+      set showtabline=2
 
-" enable mouse support
-set mouse=a
+      " enable mouse support
+      set mouse=a
 
-" better tab completion on commands
-set wildmenu
-set wildmode=list:longest
+      " better tab completion on commands
+      set wildmenu
+      set wildmode=list:longest
 
-" close buffer when tab is closed
-set nohidden
+      " close buffer when tab is closed
+      set nohidden
 
-" better moving between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+      " better moving between windows
+      map <C-j> <C-W>j
+      map <C-k> <C-W>k
+      map <C-h> <C-W>h
+      map <C-l> <C-W>l
 
-" supertab config
-set ofu=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+      " supertab config
+      set ofu=syntaxcomplete#Complete
+      let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+      autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-" line numbers
-set number
+      " line numbers
+      set number
 
-" shortcuts to common commands
-let mapleader = ","
-nnoremap <leader>a :Ack 
-nnoremap <leader>e :tabnew<CR>:CommandT<CR>
-nnoremap <leader>l :NERDTreeToggle<CR>
-nnoremap <leader>o :CommandT<CR>
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>s :vsplit<CR>
-nnoremap <leader>w :tabclose<CR>
+      " shortcuts to common commands
+      let mapleader = ","
+      nnoremap <leader>a :Ack 
+      nnoremap <leader>e :tabnew<CR>:CommandT<CR>
+      nnoremap <leader>l :NERDTreeToggle<CR>
+      nnoremap <leader>o :CommandT<CR>
+      nnoremap <leader>t :tabnew<CR>
+      nnoremap <leader>s :vsplit<CR>
+      nnoremap <leader>w :tabclose<CR>
 
-" ; is better than :, and kj is better than ctrl-c
-nnoremap ; :
-" also autosave when going to insert mode
-inoremap kj <Esc>:w<CR>
+      " ; is better than :, and kj is better than ctrl-c
+      nnoremap ; :
+      " also autosave when going to insert mode
+      inoremap kj <Esc>:w<CR>
 
-" ensure line numbers are viewable in translucent terminal windows
-highlight LineNr ctermfg=gray ctermbg=black
+      " ensure line numbers are viewable in translucent terminal windows
+      highlight LineNr ctermfg=gray ctermbg=black
