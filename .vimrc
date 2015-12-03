@@ -66,7 +66,7 @@ if has('autocmd')
 
       " font options
       set background=dark
-      colorscheme pablo " matches my terminal's colorscheme
+      colorscheme elflord " matches my terminal's colorscheme better
       set gfn=Inconsolata:h14
 
       " keep at least 5 lines below the cursor
