@@ -19,6 +19,7 @@
 "   ,w: close tab
 "   kj: enter normal mode
 "   gt: toggle tabs opened with ,t
+"   Ctrl+h(or j or k or l): switch between windows
 """""""""""""""""""""""""""""""""
 
 " long live vim
@@ -66,7 +67,8 @@ if has('autocmd')
 
       " font options
       set background=dark
-      colorscheme pablo " matches my terminal's colorscheme
+      colorscheme elflord " matches my terminal's colorscheme better
+
       set gfn=Inconsolata:h14
 
       " keep at least 5 lines below the cursor
