@@ -127,7 +127,11 @@ if has('autocmd')
       " ensure line numbers are viewable in translucent terminal windows
       highlight LineNr ctermfg=gray ctermbg=black
 
-      " for syntastic
+      " for syntastic (requires pathogen)
+      "to install pathogen,type the following on the command line:
+      " mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+      " curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+      
       execute pathogen#infect()
       set statusline+=%#warningmsg#
       set statusline+=%{SyntasticStatuslineFlag()}
