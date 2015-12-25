@@ -8,12 +8,12 @@ Requirements:
      * Vim
 
 
-Installation:
+Installation on Ubuntu:
 ---
 
-    sudo yum -y install gcc make ruby ruby-devel vim
+    sudo apt-get install gcc make ruby ruby-dev vim
     mkdir ~/.vim
-    git clone git://github.com/dmalan/vimrc.git ~/.vim
+    git clone git://github.com/nikssardana/vimrc-1 ~/.vim
     ln -s ~/.vim/.vimrc .vimrc
     cd ~/.vim/ruby/command-t
     ruby extconf.rb
