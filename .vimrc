@@ -103,7 +103,7 @@ if has('autocmd')
 
       " supertab config
       set ofu=syntaxcomplete#Complete
-      let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+      let g:SuperTabDefaultCompletionType = "context"
       autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
       " line numbers
